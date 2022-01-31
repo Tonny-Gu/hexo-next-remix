@@ -88,8 +88,20 @@ if (hexo-config('creative_commons.post')) {
     justify-content: left;
 }
 
-.post-block, .comments {
+.post-block {
     padding-bottom: $content-desktop-padding - 20px;
+}
+
++tablet() {
+    .post-block {
+        padding-bottom: ($content-tablet-padding * 2) - 20px;
+    }
+}
+
++mobile() {
+    .post-block {
+        padding-bottom: $sidebar-offset - 20px;
+    }
 }
 
 .footer {
