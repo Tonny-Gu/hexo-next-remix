@@ -40,7 +40,7 @@ post:
     post_author: Author
     post_link: This article originally appeared on
     license_title: Copyright
-    license_content: "Licensed under %s"
+    license_content: "Content on this site is licensed under %s"
 
 footer:
   powered: "Powered by %s"

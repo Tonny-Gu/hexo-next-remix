@@ -19,15 +19,62 @@ if (hexo-config('creative_commons.post')) {
   }
 }
 
+.menu {
+    padding: 10px;
+}
+
 .menu .menu-item {
     a {
-        padding: 5px 30px;
+        border-radius: 6px;
+        padding: 5px 20px;
     }
 }
 
-.links-of-blogroll-list {
+// if (not hexo-config('menu_settings.badges')) {
+//   .main-menu .menu-item-active::after {
+//       display: none;
+//   }
+// }
+
+// .sidebar-inner {
+//     padding-left: 0;
+//     padding-right: 0;
+// }
+
+.links-of-author {
+    padding: 0 20px;
+}
+
+.links-of-author-item {
     a {
-        border-bottom: none
+        transition-duration: .2s;
+    }
+}
+
+.links-of-blogroll-title {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    margin:0 50px;
+}
+
+.links-of-blogroll-list {
+    display: grid;
+    padding: 0 20px;
+    grid-template-columns: repeat(2, 1fr);
+    a {
+        border-bottom: none;
+    }
+}
+
+.links-of-blogroll-item {
+    border-bottom: 0;
+    border-radius: 4px;
+    margin: 0;
+    display: inline-grid;
+    transition-duration: .2s;
+
+    &:hover {
+        background: var(--body-bg-color);
     }
 }
 
@@ -51,13 +98,25 @@ if (hexo-config('creative_commons.post')) {
 
 .posts-expand .post-meta-container {
     time {
-        border-bottom: 0px;
+        border-bottom: none;
     }
 }
 
 .powered-by {
     a {
-        border-bottom: 0px;
+        border-bottom: none;
+        &:hover {
+            border-bottom: 1px solid var(--link-hover-color);
+        }
+    }
+}
+
+.copyright {
+    a {
+        border-bottom: none;
+        &:hover {
+            border-bottom: 1px solid var(--link-hover-color);
+        }
     }
 }
 
@@ -134,9 +193,15 @@ if (hexo-config('creative_commons.post')) {
 }
 
 if (hexo-config('toc.enable')) {
-  .post-toc {
+    .post-toc {
+        // ol {
+        //     padding-left: 20px;
+        // }
         a {
             border-bottom: none;
+            &:hover {
+                border-bottom: 1px solid var(--link-hover-color);
+            }
         }
     }
 }
@@ -150,6 +215,4 @@ if (hexo-config('toc.enable')) {
     font-family: var(--base-font-family);
     */
     -webkit-font-smoothing: antialiased;
-    --animate-delay: 0.5s;
-    --animate-duration: 0.5s;
 }
