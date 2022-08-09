@@ -1,11 +1,11 @@
 {%- set ccIcon = '<i class="fab fa-fw fa-creative-commons"></i>' %}
 {%- set ccText = theme.creative_commons.license | upper %}
 
-<div class="copyright">
+<div class="copyright-inject">
   {{- __('post.copyright.license_content', next_url(ccURL, ccIcon + ccText)) }}
 </div>
 
-<div class="powered-by">
+<div class="powered-by-inject">
   {%- set next_site = 'https://github.com/Tonny-Gu/hexo-next-remix' %}
   {{- __('footer.powered', next_url('https://hexo.io', 'Hexo') + ' & ' + next_url(next_site, 'NexT (NekoDaemon Remix)')) }}
 </div>

@@ -41,6 +41,19 @@ if (hexo-config('creative_commons.post')) {
 //     padding-right: 0;
 // }
 
+.site-state-item {
+    padding: 0;
+    a {
+        padding: 0 10px;
+        border-bottom: 0;
+        border-radius: 6px;
+        transition-duration: .2s;
+        &:hover {
+            background: var(--body-bg-color);
+        }
+    }
+}
+
 .links-of-author {
     padding: 0 20px;
 }
@@ -52,15 +65,18 @@ if (hexo-config('creative_commons.post')) {
 }
 
 .links-of-blogroll-title {
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--body-bg-color);
     padding-top: 10px;
-    margin:0 50px;
+    // margin: 0 50px;
 }
 
 .links-of-blogroll-list {
-    display: grid;
+    // display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 0 20px;
-    grid-template-columns: repeat(2, 1fr);
+    // grid-template-columns: repeat(2, 1fr);
     a {
         border-bottom: none;
     }
@@ -70,9 +86,13 @@ if (hexo-config('creative_commons.post')) {
     border-bottom: 0;
     border-radius: 4px;
     margin: 0;
-    display: inline-grid;
+    // display: inline-grid;
+    display: inline-flex;
     transition-duration: .2s;
 
+    a {
+        padding: 0 8px;
+    }
     &:hover {
         background: var(--body-bg-color);
     }
@@ -120,7 +140,7 @@ if (hexo-config('creative_commons.post')) {
     }
 }
 
-.powered-by {
+.powered-by-inject {
     a {
         border-bottom: none;
         &:hover {
@@ -129,7 +149,7 @@ if (hexo-config('creative_commons.post')) {
     }
 }
 
-.copyright {
+.copyright-inject {
     a {
         border-bottom: none;
         &:hover {
@@ -176,9 +196,17 @@ if (hexo-config('creative_commons.post')) {
     }
 }
 
-.back-to-top {
-    // border-radius: 100%;
+if (hexo-config('back2top.sidebar')) {
+  // Only when back2top.sidebar is true, apply the following styles
+  .back-to-top {
+    display: none;
+
+    &.back-to-top-on {
+      display: block;
+    }
+  }
 }
+
 
 .main-inner > {
     .pagination {
