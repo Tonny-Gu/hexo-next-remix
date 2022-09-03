@@ -110,23 +110,12 @@ if (hexo-config('creative_commons.post')) {
 
 .index > {
     .post-block {
-        padding-bottom: $content-desktop-padding - 20px;
-    }
-}
-
-+tablet() {
-    .index > {
-        .post-block {
-            padding-bottom: ($content-tablet-padding * 2) - 20px;
+        .post-body {
+            > p {
+                margin: 0;
+            }
         }
-    }
-}
-
-+mobile() {
-    .index > {
-        .post-block {
-            padding-bottom: $sidebar-offset - 20px;
-        }
+    //     padding-bottom: $sidebar-offset - 20px;
     }
 }
 
